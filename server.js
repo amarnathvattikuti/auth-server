@@ -24,6 +24,10 @@ connection.once('open', () => {
 app.use(express.json());
 app.use(cors({origin:"*"}));
 
+app.get('/', (req, res) => {
+    console.log('server started...')
+})
+
 app.post('/registration', async (req, res) => {
 
     try {
