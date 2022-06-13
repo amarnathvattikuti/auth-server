@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(cors({origin:"*"}));
 
 app.get('/', (req, res) => {
-    console.log('server started...')
+    res.send('server strted')
 })
 
 app.post('/registration', async (req, res) => {
