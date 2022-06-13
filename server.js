@@ -18,8 +18,8 @@ mongoose.connect(uri,  { useNewUrlParser: true, useUnifiedTopology: true})
 const connection = mongoose.connection;
 
 connection.once('open', () => {
-    console.log('Server listning to 5000')
-})
+    console.log('mongo DB connected successfully')
+ });
 
 app.use(express.json());
 app.use(cors({origin:"*"}));
@@ -93,6 +93,6 @@ app.get('/me', middleware,async (req, res) => {
     }
 })
 
-app.listen('5000', () => {
-    console.log('server listing to 5000')
+app.listen(port, () =>{
+    console.log(`server listning to : ${port}`);
 })
